@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Project Manager App</title>
+</head>
+<body>
+    <main class="container full">
+        <a href="/">
+            <h1 class="text-center title">Project Manager App</h1>
+        </a>
+        <div class="window">
+    <h2 class="text-center subtitle">Task List for <%= project.name %></h2>
+
+        <% projectTasks.forEach(task => {%>
+            <div class="listItem">
+                <div class="item-description"><%= task.description %></div>
+                <div class="item-delete"><a class="" href="/tasks/<%= task.id%>/delete/<%= project.id%>">Delete</a></div>
+                <div class="item">
+                    <% if (task.completed) {%>
+                        Status:
+                        <span class="ok">
+                            Status: <%= "Completed" %>
+                        </span>
+                    <% } else { %>
+                        Status:
+                        <span class="alert">
+                             <%= "Not completed" %>
+                        </span>
+                    <% } %>
+                </div>
+                
+            </div>
+        <% });%>
+  
+    <h2 class="text-center subtitle low">Add Tasks to your project</h2>
+
+    <form class="container" action="/task/add/<%= project.id%>" method="POST">
+        <select class="field" name="taskToAdd" id="">
+            <% allTasks.forEach(task=> {%>
+                <option value="<%=task.id%>">
+                    <%= task.description%>
+                </option>
+                <%});%>
+        </select>
+        <button class="btn">ADD TASK</button>
+        </div>
+    </main>
+</body>
+</html>

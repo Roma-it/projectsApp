@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Manager App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <main class="container full">
+      <a href="/"><h1 class="text-center title">Project Manager App</h1></a>
+      <div class="window">
+      <div class="container">
+    <h2 class="text-center subtitle">Create a new project</h2>
+    <form class="container" action="/project/create" method="POST">
+      <input class="field" name="name" type="text" placeholder="Project Name">
+    <select class="field" name="template" id="">
+      <option value="">Choose what you want to do</option>
+      <% templates.forEach(element => {%>
+          <option value="<%=element.id%>"><%= element.name%></option> 
+      <%});%>
+    </select>
+    <button class="btn">CREATE PROJECT</button>
+    </form>
+    </div>
+
+    <h2 class="text-center subtitle low">View your projects</h2>
+    <form class="container" action="/project" method="GET">
+      <select class="field" name="project" id="">
+        <option value="">Choose your project</option>
+        <% projects.forEach(project=> {%>
+          <option value="<%=project.id%>">
+            <%= project.name%>
+          </option>
+          <%});%>
+      </select>
+      <button class="btn">EDIT PROJECT</button>
+    </form>
+    </div>
+    </main>
+  </body>
+</html>

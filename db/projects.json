@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Javascript",
+    "template": 1,
+    "tasks": [
+      "3",
+      "4"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Challenge",
+    "template": "2",
+    "tasks": []
+  }
+]

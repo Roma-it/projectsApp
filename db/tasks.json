@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "description": "Learn a new programming",
+        "completed": false
+    },
+    {
+        "id": 2,
+        "description": "Do some excersices to practice what you have learned",
+        "completed": false
+    },
+    {
+        "id": 3,
+        "description": "Write code",
+        "completed": false
+    },
+    {
+        "id": 4,
+        "description": "Test your code",
+        "completed": false
+    },
+    {
+        "id": 5,
+        "description": "Turn off the computer",
+        "completed": false
+    },
+    {
+        "id": 6,
+        "description": "Try to get some rest",
+        "completed": false
+    }
+]
