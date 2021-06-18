@@ -3,10 +3,7 @@
     "id": 1,
     "name": "Javascript",
     "template": 1,
-    "tasks": [
-      "3",
-      "4"
-    ]
+    "tasks": []
   },
   {
     "id": 2,

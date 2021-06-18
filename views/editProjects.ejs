@@ -39,7 +39,7 @@
     <h2 class="text-center subtitle low">Add Tasks to your project</h2>
 
     <form class="container" action="/task/add/<%= project.id%>" method="POST">
-        <select class="field" name="taskToAdd" id="">
+        <select class="field" name="taskToAdd" id="" required>
             <% allTasks.forEach(task=> {%>
                 <option value="<%=task.id%>">
                     <%= task.description%>

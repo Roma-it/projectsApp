@@ -1,10 +1,9 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const mainRouter = require("./routes/mainRouter");
 
-var mainRouter = require("./routes/mainRouter");
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

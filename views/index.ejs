@@ -12,7 +12,7 @@
     <h2 class="text-center subtitle">Create a new project</h2>
     <form class="container" action="/project/create" method="POST">
       <input class="field" name="name" type="text" placeholder="Project Name">
-    <select class="field" name="template" id="">
+    <select class="field" name="template" id="" required>
       <option value="">Choose what you want to do</option>
       <% templates.forEach(element => {%>
           <option value="<%=element.id%>"><%= element.name%></option> 
@@ -24,7 +24,7 @@
 
     <h2 class="text-center subtitle low">View your projects</h2>
     <form class="container" action="/project" method="GET">
-      <select class="field" name="project" id="">
+      <select class="field" name="project" id="" required>
         <option value="">Choose your project</option>
         <% projects.forEach(project=> {%>
           <option value="<%=project.id%>">
